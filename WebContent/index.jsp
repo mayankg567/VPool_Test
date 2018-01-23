@@ -25,6 +25,14 @@
 				<th>Enter Password:</th>
 				<td><input type="password" name="pass" placeholder="qwerty"></td>
 			</tr>
+			<tr>
+				<td>
+					<input type="submit" value="Login">
+				</td>
+				<td>
+					<input type="reset" value="Reset">
+				</td>
+			</tr>
 		</table>
 	</form>
 	<br><br>

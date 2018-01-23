@@ -37,6 +37,14 @@
 				<th>Enter Mobile Number:</th>
 				<td><input type="text" name="mobile" required></td>
 			</tr>
+			<tr>
+				<td>
+					<input type="submit" value="Register">
+				</td>
+				<td>
+					<input type="reset" value="Reset">
+				</td>
+			</tr>
 		</table>
 	</form>
 	<br><br>
