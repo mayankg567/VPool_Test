@@ -7,6 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<%
+		RequestDispatcher rd;
+		session = (HttpSession) session.getAttribute("sessionx");
+		if (session == null) {
+			rd = request.getRequestDispatcher("index.jsp");
+			rd.forward(request, response);
+		}
+	%>
 </body>
 </html>

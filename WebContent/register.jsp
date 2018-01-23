@@ -7,6 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<%
+		RequestDispatcher rd;
+		session = (HttpSession) session.getAttribute("sessionx");
+		if (session != null) {
+			rd = request.getRequestDispatcher(".jsp");
+			rd.forward(request, response);
+		}
+	%>
 	<form action="register.do" method="post">
 		<table>
 			<tr>
