@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.vpool.model.UserModel" table = "user">
+      
+      <meta attribute = "class-description">
+         This class contains the user details. 
+      </meta>
+      
+      <id name = "userID" type = "Integer" >
+      	<column name="userID"></column>
+      </id>
+      
+      <property name = "emailID" column = "emailID" type = "string" not-null="true" unique="true" length="60"/>
+      <property name = "pass" column = "pass" type = "text" not-null="true"/>
+      <property name = "contact" column = "contact" type = "string" not-null="true" length="10" unique="true"/>
+      <property name = "password" column = "password" type = "string" not-null="true" length="18" />
+      <property name = "password" column = "password" type = "string" not-null="true" length="18" />
+      <property name = "password" column = "password" type = "string" not-null="true" length="18" />
+      <property name = "password" column = "password" type = "string" not-null="true" length="18" />
+      <property name = "password" column = "password" type = "string" not-null="true" length="18" />
+      <property name = "password" column = "password" type = "string" not-null="true" length="18" />
+      <property name = "password" column = "password" type = "string" not-null="true" length="18" />
+      <property name = "password" column = "password" type = "string" not-null="true" length="18" />
+      <property name = "password" column = "password" type = "string" not-null="true" length="18" />
+      <property name = "password" column = "password" type = "string" not-null="true" length="18" />
+      <property name = "password" column = "password" type = "string" not-null="true" length="18" />
+      <property name = "password" column = "password" type = "string" not-null="true" length="18" />
+      <property name = "password" column = "password" type = "string" not-null="true" length="18" />
+   </class>
+</hibernate-mapping>
