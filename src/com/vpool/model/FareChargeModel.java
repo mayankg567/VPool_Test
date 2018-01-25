@@ -1,6 +1,7 @@
 package com.vpool.model;
 
 public class FareChargeModel {
+<<<<<<< HEAD
 String vehicleType;
 int baseFare, chargePerKM, chargePerMinute, driverSharePercent;
 public String getVehicleType() {
@@ -33,5 +34,7 @@ public int getDriverSharePercent() {
 public void setDriverSharePercent(int driverSharePercent) {
 	this.driverSharePercent = driverSharePercent;
 }
+=======
+>>>>>>> parent of 807a818... Revert "model classes added"
 
 }

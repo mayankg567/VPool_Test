@@ -6,6 +6,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class PassengerTripModel extends ActionSupport implements Serializable{
 	int passengerTripID, tripID, passengerID, farePassTotal;
+<<<<<<< HEAD
 	String pickupPoint, dropPoint, expectedPickupTime, startTime, endTime, status, payStatus, payMode;
 	
 	public String getPayStatus() {
@@ -20,6 +21,9 @@ public class PassengerTripModel extends ActionSupport implements Serializable{
 	public void setPayMode(String payMode) {
 		this.payMode = payMode;
 	}
+=======
+	String pickupPoint, dropPoint, expectedPickupTime, startTime, endTime, status;
+>>>>>>> parent of 807a818... Revert "model classes added"
 	public int getPassengerTripID() {
 		return passengerTripID;
 	}
