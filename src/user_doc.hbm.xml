@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.vpool.model.UserDocModel" table = "UserDoc">
+      
+      <meta attribute = "class-description">
+         This class contains the user details. 
+      </meta>
+      
+      <id name = "udID" type = "integer" column="udID">
+      	<generator class="increment"></generator>
+      </id>
+      
+      <property name = "aadharNo" column = "aadharNo" type = "string" not-null="true" length="12"/>
+      
+      <property name = "panNo" column = "panNo" type = "string" not-null="true" length="10"/>
+      
+      <property name = "dlNo" column = "dlNo" type = "string" not-null="true" length="13"/>
+      
+      <property name = "aadharLoc" column = "aadharLoc" type = "string" not-null="true" length="50" />
+      
+      <property name = "panLoc" column = "panLoc" type = "string" not-null="true" length="50" />
+      
+      <property name = "dlLoc" column = "dlLoc" type = "string" not-null="true" length="50" />
+      
+      <property name = "dlVerfStatus" column = "dlVerfStatus" type = "string" not-null="true" length="1" />
+      
+      <property name = "panVerfStatus" column = "panVerfStatus" type = "string" not-null="true" length="1" />
+      
+      <property name = "aadharVerfStatus" column = "aadharVerfStatus" type = "string" not-null="true" length="1" />
+   </class>
+</hibernate-mapping>

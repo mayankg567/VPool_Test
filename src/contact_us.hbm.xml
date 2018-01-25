@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.vpool.model.ContactUsModel" table = "ContactUs">
+      
+      <meta attribute = "class-description">
+         This class contains the user details. 
+      </meta>
+      
+      <id name = "queryID" type = "integer" column="queryID">
+      	<generator class="increment"></generator>
+      </id>
+      
+      <property name = "emailID" column = "emailID" type = "string" not-null="true" length="50"/>
+      
+      <property name = "queryMessage" column = "queryMessage" type = "string" not-null="true" length="1000"/>
+      
+      <property name = "mob" column = "mob" type = "string" not-null="true" length="10"/>
+      
+      <property name = "submitTime" column = "submitTime" type = "timestamp" not-null="true"/>
+   </class>
+</hibernate-mapping>
