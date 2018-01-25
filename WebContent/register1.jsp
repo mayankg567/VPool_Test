@@ -27,7 +27,7 @@
 			</tr>
 			<tr>
 				<th>Enter Last Name:</th>
-				<td><input type="text" name="lastName" required></td>
+				<td><input type="text" name="lastName"></td>
 			</tr>
 			<tr>
 				<th>Enter EmailID:</th>

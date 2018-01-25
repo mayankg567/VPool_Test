@@ -18,24 +18,12 @@
 	<form action="register2.do" method="post">
 		<table>
 			<tr>
-				<th>Enter First Name:</th>
-				<td><input type="text" name="firstName" required></td>
+				<th>Enter OTP received on your Email &nbsp;<%= %>:</th>
+				<td><input type="number" name="eotp" maxlength="6" required></td>
 			</tr>
 			<tr>
-				<th>Enter Middle Name:</th>
-				<td><input type="text" name="middleName"></td>
-			</tr>
-			<tr>
-				<th>Enter Last Name:</th>
-				<td><input type="text" name="lastName" required></td>
-			</tr>
-			<tr>
-				<th>Enter EmailID:</th>
-				<td><input type="text" name="emailID" placeholder="example123@abc.com" required></td>
-			</tr>
-			<tr>
-				<th>Enter Mobile Number:</th>
-				<td><input type="text" name="mobNo" required></td>
+				<th>Enter OTP received on your Mobile %nbsp;<%= %>:</th>
+				<td><input type="number" name="motp" maxlength="6"></td>
 			</tr>
 			<tr>
 				<td>
