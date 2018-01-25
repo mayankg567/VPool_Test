@@ -15,7 +15,7 @@
 			rd.forward(request, response);
 		}
 	%>
-	<form action="register1.do" method="post">
+	<form action="register1" method="post">
 		<table>
 			<tr>
 				<th>Enter First Name:</th>

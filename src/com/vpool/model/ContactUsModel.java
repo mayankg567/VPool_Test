@@ -14,7 +14,7 @@ public class ContactUsModel extends ActionSupport implements Serializable {
 		return queryID;
 	}
 
-	public void setQueryId(int queryID) {
+	public void setQueryID(int queryID) {
 		this.queryID = queryID;
 	}
 
@@ -34,20 +34,20 @@ public class ContactUsModel extends ActionSupport implements Serializable {
 		this.queryMessage = queryMessage;
 	}
 
+	public String getMobNo() {
+		return mobNo;
+	}
+
+	public void setMobNo(String mobNo) {
+		this.mobNo = mobNo;
+	}
+
 	public Date getSubmitTime() {
 		return submitTime;
 	}
 
 	public void setSubmitTime(Date submitTime) {
 		this.submitTime = submitTime;
-	}
-
-	public String getMob() {
-		return mobNo;
-	}
-
-	public void setMob(String mobNo) {
-		this.mobNo = mobNo;
 	}
 
 }

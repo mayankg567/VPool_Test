@@ -4,7 +4,7 @@
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>  
-    <package name="default" extends="struts-default">  
+    <package name="default" extends="struts-default" namespace="/">  
        <action name="register1" class="com.vpool.action.Register1Action">  
             <result name="success">/register2.jsp</result>  
             <result name="error">/register1.jsp</result>  

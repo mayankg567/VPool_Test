@@ -25,11 +25,11 @@ public class Register1Action extends UserModel implements ServletRequestAware {
 			session.setAttribute("emailID", getEmailID());
 			session.setAttribute("mobNo", getMobNo());
 			HBUtil.closeSF();
-			return SUCCESS;
+			return "success";
 		} catch (Exception e) {
-
+			e.printStackTrace();
 			HBUtil.closeSF();
-			return ERROR;
+			return "error";
 		}
 	}
 

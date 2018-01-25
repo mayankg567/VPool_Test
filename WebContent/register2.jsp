@@ -7,22 +7,22 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
+	<%-- <%
 		RequestDispatcher rd;
 		session = (HttpSession) session.getAttribute("sessionx");
 		if (session != null) {
 			rd = request.getRequestDispatcher(".jsp");
 			rd.forward(request, response);
 		}
-	%>
+	%> --%>
 	<form action="register2.do" method="post">
 		<table>
 			<tr>
-				<th>Enter OTP received on your Email &nbsp;<%= %>:</th>
+				<th>Enter OTP received on your Email &nbsp;<%=session.getAttribute("emailID").toString() %>:</th>
 				<td><input type="number" name="eotp" maxlength="6" required></td>
 			</tr>
 			<tr>
-				<th>Enter OTP received on your Mobile %nbsp;<%= %>:</th>
+				<th>Enter OTP received on your Mobile &nbsp;<%=session.getAttribute("mobNo").toString() %>:</th>
 				<td><input type="number" name="motp" maxlength="6"></td>
 			</tr>
 			<tr>
