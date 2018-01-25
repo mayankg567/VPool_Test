@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.vpool.model.PassengerTripModel" table = "PassengerTrip">
+      
+      <meta attribute = "class-description">
+         This class contains the user details. 
+      </meta>
+      
+      <id name = "passengerTripID" type = "integer" column="passengerTripID">
+      	<generator class="increment"></generator>
+      </id>
+      
+      <property name = "pickupPoint" column = "pickupPoint" type = "string" not-null="true" length="1000"/>
+      
+      <property name = "dropPoint" column = "dropPoint" type = "string" not-null="true" length="1000"/>
+      
+      <property name = "expectedPickupTime" column = "expectedPickupTime" type = "timestamp" not-null="true" />
+      
+      <property name = "startTime" column = "startTime" type = "timestamp" not-null="true" />
+      
+      <property name = "endTime" column = "endTime" type = "timestamp" not-null="true" />
+      
+      <property name = "status" column = "status" type = "string" not-null="true" length="9" />
+      
+      <property name = "farePassTotal" column = "farePassTotal" type = "integer" not-null="true" length="3" />
+      
+      <property name = "payStatus" column = "payStatus" type = "string" not-null="true" length="9" />
+      
+      <property name = "payMode" column = "payMode" type = "string" not-null="true" length="15" />
+   </class>
+</hibernate-mapping>

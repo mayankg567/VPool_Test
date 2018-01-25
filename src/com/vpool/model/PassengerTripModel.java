@@ -6,7 +6,20 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class PassengerTripModel extends ActionSupport implements Serializable{
 	int passengerTripID, tripID, passengerID, farePassTotal;
-	String pickupPoint, dropPoint, expectedPickupTime, startTime, endTime, status;
+	String pickupPoint, dropPoint, expectedPickupTime, startTime, endTime, status, payStatus, payMode;
+	
+	public String getPayStatus() {
+		return payStatus;
+	}
+	public void setPayStatus(String payStatus) {
+		this.payStatus = payStatus;
+	}
+	public String getPayMode() {
+		return payMode;
+	}
+	public void setPayMode(String payMode) {
+		this.payMode = payMode;
+	}
 	public int getPassengerTripID() {
 		return passengerTripID;
 	}

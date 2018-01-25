@@ -5,24 +5,24 @@ import java.io.Serializable;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class AuditFareChargeModel extends ActionSupport implements Serializable{
-	int fcID;
-	String valueOld, valueNew, fieldName, updateTime;
+	int fcID, valueOld, valueNew;
+	String fieldName, updateTime;
 	public int getFcID() {
 		return fcID;
 	}
 	public void setFcID(int fcID) {
 		this.fcID = fcID;
 	}
-	public String getValueOld() {
+	public int getValueOld() {
 		return valueOld;
 	}
-	public void setValueOld(String valueOld) {
+	public void setValueOld(int valueOld) {
 		this.valueOld = valueOld;
 	}
-	public String getValueNew() {
+	public int getValueNew() {
 		return valueNew;
 	}
-	public void setValueNew(String valueNew) {
+	public void setValueNew(int valueNew) {
 		this.valueNew = valueNew;
 	}
 	public String getFieldName() {

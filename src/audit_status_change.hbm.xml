@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.vpool.model.AuditStatusChangeModel" table = "AuditStatusChange">
+      
+      <meta attribute = "class-description">
+         This class contains the user details. 
+      </meta>
+      
+      <id name = "statusID" type = "integer" column="statusID">
+      	<generator class="increment"></generator>
+      </id>
+      
+      <property name = "oldStatus" column = "oldStatus" type = "string" not-null="true" length="10"/>
+      
+      <property name = "newStatus" column = "newStatus" type = "string" not-null="true" length="10"/>
+      
+      <property name = "updatedBy" column = "updatedBy" type = "string" not-null="true" length="50"/>
+      
+      <property name = "statusType" column = "statusType" type = "string" not-null="true" length="20"/>
+      
+      <property name = "referenceID" column = "referenceID" type = "string" not-null="true" length="20"/>
+      
+      <property name = "updateTime" column = "updateTime" type = "timestamp" not-null="true"/>
+   </class>
+</hibernate-mapping>

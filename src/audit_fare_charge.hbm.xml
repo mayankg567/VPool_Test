@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.vpool.model.AuditFareChargeModel" table = "AuditFareCharge">
+      
+      <meta attribute = "class-description">
+         This class contains the user details. 
+      </meta>
+      
+      <id name = "fcID" type = "integer" column="fcID">
+      	<generator class="increment"></generator>
+      </id>
+      
+      <property name = "valueOld" column = "valueOld" type = "integer" not-null="true" length="4"/>
+      
+      <property name = "valueNew" column = "valueNew" type = "integer" not-null="true" length="4"/>
+      
+      <property name = "fieldName" column = "fieldName" type = "string" not-null="true" length="18"/>
+      
+      <property name = "updateTime" column = "updateTime" type = "timestamp" not-null="true"/>
+   </class>
+</hibernate-mapping>

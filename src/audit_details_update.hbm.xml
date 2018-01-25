@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.vpool.model.AuditDetailsUpdateModel" table = "AuditDetailsUpdate">
+      
+      <meta attribute = "class-description">
+         This class contains the user details. 
+      </meta>
+      
+      <id name = "updateID" type = "integer" column="updateID">
+      	<generator class="increment"></generator>
+      </id>
+      
+      <property name = "valueOld" column = "valueOld" type = "string" not-null="true" length="1000"/>
+      
+      <property name = "valueNew" column = "valueNew" type = "string" not-null="true" length="1000"/>
+      
+      <property name = "referredField" column = "referredField" type = "string" not-null="true" length="50"/>
+      
+      <property name = "referFieldID" column = "referFieldID" type = "string" not-null="true" length="50" />
+      
+      <property name = "referFieldValue" column = "referFieldValue" type = "string" not-null="true" length="10" />
+      
+      <property name = "updateTime" column = "updateTime" type = "timestamp" not-null="true" />
+   </class>
+</hibernate-mapping>

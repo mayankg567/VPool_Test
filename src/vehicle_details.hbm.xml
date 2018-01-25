@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.vpool.model.VehicleDetailsModel" table = "VehicleDetails">
+      
+      <meta attribute = "class-description">
+         This class contains the user details. 
+      </meta>
+      
+      <id name = "vehicleID" type = "integer" column="vehicleID">
+      	<generator class="increment"></generator>
+      </id>
+      
+      <property name = "vehicleType" column = "vehicleType" type = "string" not-null="true" length="15"/>
+      
+      <property name = "status" column = "status" type = "string" not-null="true" length="8"/>
+      
+      <property name = "companyName" column = "companyName" type = "string" not-null="true" length="50"/>
+      
+      <property name = "modelName" column = "modelName" type = "string" not-null="true" length="50" />
+      
+      <property name = "modelVer" column = "modelVer" type = "string" length="50" />
+      
+      <property name = "chesisNo" column = "chesisNo" type = "string" not-null="true" length="17" />
+      
+      <property name = "insuranceNo" column = "insuranceNo" type = "string" not-null="true" length="50" />
+      
+      <property name = "licensePlateNo" column = "licensePlateNo" type = "string" not-null="true" length="13" />
+      
+      <property name = "fuelType" column = "fuelType" type = "string" not-null="true" length="20" />
+      
+      <property name = "seatAvailable" column = "seatAvailable" type = "integer" not-null="true" length="2" />
+   </class>
+</hibernate-mapping>
