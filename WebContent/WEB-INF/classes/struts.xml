@@ -5,10 +5,11 @@
 
 <struts>  
     <package name="default" extends="struts-default" namespace="/">  
-       <!-- <action name="register" class="com.cdac.action.RegisterAction">  
-            <result name="success">/site_index.jsp</result>  
-            <result name="error">/site_index.jsp</result>  
+       <action name="register1" class="com.vpool.action.Register1Action">  
+            <result name="success">/register2.jsp</result>  
+            <result name="error">/register1.jsp</result>  
         </action>
+        <!--
         <action name="addCDACCourseAction"  class="com.cdac.action.CDACCourseAction"  >  
             <result name="success" type="redirect">cdacCourseView</result>  
             <result name="error">/addcdaccourse.jsp</result>  

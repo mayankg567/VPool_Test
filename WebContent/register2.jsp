@@ -15,19 +15,31 @@
 			rd.forward(request, response);
 		}
 	%>
-	<form action="login.do" method="post">
+	<form action="register2.do" method="post">
 		<table>
 			<tr>
-				<th>Enter EmailID:</th>
-				<td><input type="text" name="email" placeholder="example123@abc.com"></td>
+				<th>Enter First Name:</th>
+				<td><input type="text" name="firstName" required></td>
 			</tr>
 			<tr>
-				<th>Enter Password:</th>
-				<td><input type="password" name="pass" placeholder="qwerty"></td>
+				<th>Enter Middle Name:</th>
+				<td><input type="text" name="middleName"></td>
+			</tr>
+			<tr>
+				<th>Enter Last Name:</th>
+				<td><input type="text" name="lastName" required></td>
+			</tr>
+			<tr>
+				<th>Enter EmailID:</th>
+				<td><input type="text" name="emailID" placeholder="example123@abc.com" required></td>
+			</tr>
+			<tr>
+				<th>Enter Mobile Number:</th>
+				<td><input type="text" name="mobNo" required></td>
 			</tr>
 			<tr>
 				<td>
-					<input type="submit" value="Login">
+					<input type="submit" value="Register">
 				</td>
 				<td>
 					<input type="reset" value="Reset">
@@ -36,6 +48,6 @@
 		</table>
 	</form>
 	<br><br>
-	<a href="register1.jsp">If not a member. Click here to register and Become our valued customer</a>
+	<a href="index.jsp">If Already a member. Click here to LOGIN</a>
 </body>
 </html>

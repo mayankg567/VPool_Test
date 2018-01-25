@@ -10,25 +10,40 @@
          This class contains the user details. 
       </meta>
       
-      <id name = "userID" type = "Integer" >
-      	<column name="userID"></column>
+      <id name = "userID" type = "integer" column="userID">
+      	<generator class="increment"></generator>
       </id>
       
       <property name = "emailID" column = "emailID" type = "string" not-null="true" unique="true" length="60"/>
-      <property name = "pass" column = "pass" type = "text" not-null="true"/>
-      <property name = "contact" column = "contact" type = "string" not-null="true" length="10" unique="true"/>
-      <property name = "password" column = "password" type = "string" not-null="true" length="18" />
-      <property name = "password" column = "password" type = "string" not-null="true" length="18" />
-      <property name = "password" column = "password" type = "string" not-null="true" length="18" />
-      <property name = "password" column = "password" type = "string" not-null="true" length="18" />
-      <property name = "password" column = "password" type = "string" not-null="true" length="18" />
-      <property name = "password" column = "password" type = "string" not-null="true" length="18" />
-      <property name = "password" column = "password" type = "string" not-null="true" length="18" />
-      <property name = "password" column = "password" type = "string" not-null="true" length="18" />
-      <property name = "password" column = "password" type = "string" not-null="true" length="18" />
-      <property name = "password" column = "password" type = "string" not-null="true" length="18" />
-      <property name = "password" column = "password" type = "string" not-null="true" length="18" />
-      <property name = "password" column = "password" type = "string" not-null="true" length="18" />
-      <property name = "password" column = "password" type = "string" not-null="true" length="18" />
+      
+      <property name = "pass" column = "pass" type = "string" not-null="true" length="256"/>
+      
+      <property name = "firstName" column = "firstName" type = "string" not-null="true" length="50"/>
+      
+      <property name = "middleName" column = "middleName" type = "string" length="50" />
+      
+      <property name = "lastName" column = "lastName" type = "string" length="50" />
+      
+      <property name = "mobNo" column = "mobNo" type = "string" not-null="true" length="10" />
+      
+      <property name = "altMobNo" column = "altMobNo" type = "string" length="10" />
+      
+      <property name = "gender" column = "gender" type = "string" not-null="true" length="15" />
+      
+      <property name = "address" column = "address" type = "string" not-null="true" length="1000" />
+      
+      <property name = "city" column = "city" type = "string" not-null="true" length="50" />
+      
+      <property name = "pincode" column = "pincode" type = "integer" not-null="true" length="6" />
+      
+      <property name = "state" column = "state" type = "string" not-null="true" length="60" />
+      
+      <property name = "dob" column = "dob" type = "date" not-null="true"/>
+      
+      <property name = "registeredOn" column = "registeredOn" type = "timestamp" not-null="true"/>
+      
+      <property name = "status" column = "status" type = "string" not-null="true" length="7" />
+      
+      <property name = "photoLoc" column = "photoLoc" type = "string" length="256" />
    </class>
 </hibernate-mapping>

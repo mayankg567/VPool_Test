@@ -1,13 +1,15 @@
 package com.vpool.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import com.opensymphony.xwork2.ActionSupport;
 
 public class UserModel extends ActionSupport implements Serializable {
 	private int userID, pincode;
-	private String emailID, pass, firstName, middleName, lastName, mobNo, altMobNo, gender, address, dob;
-	private String city, state, status, photoLoc, registeredOn;
+	private String emailID, pass, firstName, middleName, lastName, mobNo, altMobNo, gender, address;
+	private Date dob, registeredOn;
+	private String city, state, status, photoLoc;
 
 	public int getUserID() {
 		return userID;
@@ -97,14 +99,6 @@ public class UserModel extends ActionSupport implements Serializable {
 		this.address = address;
 	}
 
-	public String getDob() {
-		return dob;
-	}
-
-	public void setDob(String dob) {
-		this.dob = dob;
-	}
-
 	public String getCity() {
 		return city;
 	}
@@ -137,11 +131,19 @@ public class UserModel extends ActionSupport implements Serializable {
 		this.photoLoc = photoLoc;
 	}
 
-	public String getRegisteredOn() {
+	public Date getDob() {
+		return dob;
+	}
+
+	public void setDob(Date dob) {
+		this.dob = dob;
+	}
+
+	public Date getRegisteredOn() {
 		return registeredOn;
 	}
 
-	public void setRegisteredOn(String registeredOn) {
+	public void setRegisteredOn(Date registeredOn) {
 		this.registeredOn = registeredOn;
 	}
 
