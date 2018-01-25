@@ -4,10 +4,10 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
 
 <hibernate-mapping>
-   <class name = "com.vpool.model.EmergencyConnectModel" table = "EmergencyConnect">
+   <class name = "com.vpool.model.EmergencyConnectModel" table = "emergencyconnect">
       
       <meta attribute = "class-description">
-         This class contains the user details. 
+         This class contains the emergency contact details. 
       </meta>
       
       <id name = "emgID" type = "integer" column="emgID">

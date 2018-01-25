@@ -4,10 +4,10 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
 
 <hibernate-mapping>
-   <class name = "com.vpool.model.AuditLoginModel" table = "AuditLogin">
+   <class name = "com.vpool.model.AuditLoginModel" table = "auditlogin">
       
       <meta attribute = "class-description">
-         This class contains the user details. 
+         This class contains the audit login details. 
       </meta>
       
       <id name = "logID" type = "integer" column="logID">

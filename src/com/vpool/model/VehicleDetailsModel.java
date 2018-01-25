@@ -5,17 +5,9 @@ import java.io.Serializable;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class VehicleDetailsModel extends ActionSupport implements Serializable {
-	private int userID, vehicleID, seatAvailable;
-	private String vehicleType, status, companyName, modelName, modelVer, chesisNo, insuranceNo, licensePlateNo,
-			fuelType;
-
-	public int getUserID() {
-		return userID;
-	}
-
-	public void setUserID(int userID) {
-		this.userID = userID;
-	}
+	private int vehicleID, seatAvailable;
+	private String vehicleType, status, companyName, modelName, modelVersion, chassisNo, insuranceNo;
+	private String licensePlateNo, fuelType;
 
 	public int getVehicleID() {
 		return vehicleID;
@@ -65,22 +57,6 @@ public class VehicleDetailsModel extends ActionSupport implements Serializable {
 		this.modelName = modelName;
 	}
 
-	public String getModelVer() {
-		return modelVer;
-	}
-
-	public void setModelVer(String modelVer) {
-		this.modelVer = modelVer;
-	}
-
-	public String getChesisNo() {
-		return chesisNo;
-	}
-
-	public void setChesisNo(String chesisNo) {
-		this.chesisNo = chesisNo;
-	}
-
 	public String getInsuranceNo() {
 		return insuranceNo;
 	}
@@ -103,6 +79,22 @@ public class VehicleDetailsModel extends ActionSupport implements Serializable {
 
 	public void setFuelType(String fuelType) {
 		this.fuelType = fuelType;
+	}
+
+	public String getModelVersion() {
+		return modelVersion;
+	}
+
+	public void setModelVersion(String modelVersion) {
+		this.modelVersion = modelVersion;
+	}
+
+	public String getChasisNo() {
+		return chassisNo;
+	}
+
+	public void setChasisNo(String chassisNo) {
+		this.chassisNo = chassisNo;
 	}
 
 }

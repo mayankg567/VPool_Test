@@ -1,12 +1,14 @@
 package com.vpool.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import com.opensymphony.xwork2.ActionSupport;
 
 public class AuditStatusChangeModel extends ActionSupport implements Serializable {
 	private int statusID;
-	private String oldStatus, newStatus, updatedBy, updateTime, statusType, referenceID;
+	private String oldStatus, newStatus, updatedBy, statusType;
+	private Date updateTime;
 
 	public int getStatusID() {
 		return statusID;
@@ -40,11 +42,11 @@ public class AuditStatusChangeModel extends ActionSupport implements Serializabl
 		this.updatedBy = updatedBy;
 	}
 
-	public String getUpdateTime() {
+	public Date getUpdateTime() {
 		return updateTime;
 	}
 
-	public void setUpdateTime(String updateTime) {
+	public void setUpdateTime(Date updateTime) {
 		this.updateTime = updateTime;
 	}
 
@@ -54,14 +56,6 @@ public class AuditStatusChangeModel extends ActionSupport implements Serializabl
 
 	public void setStatusType(String statusType) {
 		this.statusType = statusType;
-	}
-
-	public String getReferenceID() {
-		return referenceID;
-	}
-
-	public void setReferenceID(String referenceID) {
-		this.referenceID = referenceID;
 	}
 
 }

@@ -4,10 +4,10 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
 
 <hibernate-mapping>
-   <class name = "com.vpool.model.AuditDetailsUpdateModel" table = "AuditDetailsUpdate">
+   <class name = "com.vpool.model.AuditDetailsUpdateModel" table = "auditdetailsupdate">
       
       <meta attribute = "class-description">
-         This class contains the user details. 
+         This class contains the audit details update details. 
       </meta>
       
       <id name = "updateID" type = "integer" column="updateID">
@@ -21,8 +21,6 @@
       <property name = "referredField" column = "referredField" type = "string" not-null="true" length="50"/>
       
       <property name = "referFieldID" column = "referFieldID" type = "string" not-null="true" length="50" />
-      
-      <property name = "referFieldValue" column = "referFieldValue" type = "string" not-null="true" length="10" />
       
       <property name = "updateTime" column = "updateTime" type = "timestamp" not-null="true" />
    </class>

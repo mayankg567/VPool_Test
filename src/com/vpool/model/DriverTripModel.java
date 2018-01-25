@@ -1,13 +1,15 @@
 package com.vpool.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import com.opensymphony.xwork2.ActionSupport;
 
 public class DriverTripModel extends ActionSupport implements Serializable {
-	private int tripID, driverID, vehicleID, fareDriverTotal, fareCash, driverShare;
-	private String source, destination, expectedTimeOfArrival, expectedTimeOfDestination, createdOn, startTime, endTime,
-			status;
+	private int tripID;
+	private double fareDriverTotal, fareCash, driverShare;
+	private String source, destination, status;
+	private Date createdOn, startTime, endTime, expectedTimeOfArrival, expectedTimeToDestination;
 
 	public int getTripID() {
 		return tripID;
@@ -17,43 +19,27 @@ public class DriverTripModel extends ActionSupport implements Serializable {
 		this.tripID = tripID;
 	}
 
-	public int getDriverID() {
-		return driverID;
-	}
-
-	public void setDriverID(int driverID) {
-		this.driverID = driverID;
-	}
-
-	public int getVehicleID() {
-		return vehicleID;
-	}
-
-	public void setVehicleID(int vehicleID) {
-		this.vehicleID = vehicleID;
-	}
-
-	public int getFareDriverTotal() {
+	public double getFareDriverTotal() {
 		return fareDriverTotal;
 	}
 
-	public void setFareDriverTotal(int fareDriverTotal) {
+	public void setFareDriverTotal(double fareDriverTotal) {
 		this.fareDriverTotal = fareDriverTotal;
 	}
 
-	public int getFareCash() {
+	public double getFareCash() {
 		return fareCash;
 	}
 
-	public void setFareCash(int fareCash) {
+	public void setFareCash(double fareCash) {
 		this.fareCash = fareCash;
 	}
 
-	public int getDriverShare() {
+	public double getDriverShare() {
 		return driverShare;
 	}
 
-	public void setDriverShare(int driverShare) {
+	public void setDriverShare(double driverShare) {
 		this.driverShare = driverShare;
 	}
 
@@ -73,52 +59,52 @@ public class DriverTripModel extends ActionSupport implements Serializable {
 		this.destination = destination;
 	}
 
-	public String getExpectedTimeOfArrival() {
-		return expectedTimeOfArrival;
-	}
-
-	public void setExpectedTimeOfArrival(String expectedTimeOfArrival) {
-		this.expectedTimeOfArrival = expectedTimeOfArrival;
-	}
-
-	public String getExpectedTimeOfDestination() {
-		return expectedTimeOfDestination;
-	}
-
-	public void setExpectedTimeOfDestination(String expectedTimeOfDestination) {
-		this.expectedTimeOfDestination = expectedTimeOfDestination;
-	}
-
-	public String getCreatedOn() {
-		return createdOn;
-	}
-
-	public void setCreatedOn(String createdOn) {
-		this.createdOn = createdOn;
-	}
-
-	public String getStartTime() {
-		return startTime;
-	}
-
-	public void setStartTime(String startTime) {
-		this.startTime = startTime;
-	}
-
-	public String getEndTime() {
-		return endTime;
-	}
-
-	public void setEndTime(String endTime) {
-		this.endTime = endTime;
-	}
-
 	public String getStatus() {
 		return status;
 	}
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	public Date getCreatedOn() {
+		return createdOn;
+	}
+
+	public void setCreatedOn(Date createdOn) {
+		this.createdOn = createdOn;
+	}
+
+	public Date getStartTime() {
+		return startTime;
+	}
+
+	public void setStartTime(Date startTime) {
+		this.startTime = startTime;
+	}
+
+	public Date getEndTime() {
+		return endTime;
+	}
+
+	public void setEndTime(Date endTime) {
+		this.endTime = endTime;
+	}
+
+	public Date getExpectedTimeOfArrival() {
+		return expectedTimeOfArrival;
+	}
+
+	public void setExpectedTimeOfArrival(Date expectedTimeOfArrival) {
+		this.expectedTimeOfArrival = expectedTimeOfArrival;
+	}
+
+	public Date getExpectedTimeToDestination() {
+		return expectedTimeToDestination;
+	}
+
+	public void setExpectedTimeToDestination(Date expectedTimeToDestination) {
+		this.expectedTimeToDestination = expectedTimeToDestination;
 	}
 
 }

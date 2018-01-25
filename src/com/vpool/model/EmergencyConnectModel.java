@@ -5,16 +5,8 @@ import java.io.Serializable;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class EmergencyConnectModel extends ActionSupport implements Serializable {
-	private int userID, emgID;
+	private int emgID;
 	private String emgName, emgContact;
-
-	public int getUserID() {
-		return userID;
-	}
-
-	public void setUserID(int userID) {
-		this.userID = userID;
-	}
 
 	public int getEmgID() {
 		return emgID;

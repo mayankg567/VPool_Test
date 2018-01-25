@@ -5,9 +5,8 @@ import java.io.Serializable;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class UserDocModel extends ActionSupport implements Serializable {
-	private int udID, uID;
+	private int udID;
 	private String aadharNo, panNo, dlNo, aadharLoc, panLoc, dlLoc;
-
 	private String dlVerfStatus, panVerfStatus, aadharVerfStatus;
 
 	public int getUdID() {
@@ -16,14 +15,6 @@ public class UserDocModel extends ActionSupport implements Serializable {
 
 	public void setUdID(int udID) {
 		this.udID = udID;
-	}
-
-	public int getuID() {
-		return uID;
-	}
-
-	public void setuID(int uID) {
-		this.uID = uID;
 	}
 
 	public String getAadharNo() {

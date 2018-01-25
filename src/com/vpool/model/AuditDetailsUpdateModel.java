@@ -1,12 +1,14 @@
 package com.vpool.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import com.opensymphony.xwork2.ActionSupport;
 
 public class AuditDetailsUpdateModel extends ActionSupport implements Serializable {
 	private int updateID;
-	private String valueOld, valueNew, referredField, referFieldID, referFieldValue, updateTime;
+	private String valueOld, valueNew, referredField, referFieldID;
+	private Date updateTime;
 
 	public int getUpdateID() {
 		return updateID;
@@ -48,19 +50,11 @@ public class AuditDetailsUpdateModel extends ActionSupport implements Serializab
 		this.referFieldID = referFieldID;
 	}
 
-	public String getReferFieldValue() {
-		return referFieldValue;
-	}
-
-	public void setReferFieldValue(String referFieldValue) {
-		this.referFieldValue = referFieldValue;
-	}
-
-	public String getUpdateTime() {
+	public Date getUpdateTime() {
 		return updateTime;
 	}
 
-	public void setUpdateTime(String updateTime) {
+	public void setUpdateTime(Date updateTime) {
 		this.updateTime = updateTime;
 	}
 

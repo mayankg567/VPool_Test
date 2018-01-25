@@ -4,10 +4,10 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
 
 <hibernate-mapping>
-   <class name = "com.vpool.model.AuditStatusChangeModel" table = "AuditStatusChange">
+   <class name = "com.vpool.model.AuditStatusChangeModel" table = "auditstatuschange">
       
       <meta attribute = "class-description">
-         This class contains the user details. 
+         This class contains the audit status changes details. 
       </meta>
       
       <id name = "statusID" type = "integer" column="statusID">
@@ -21,8 +21,6 @@
       <property name = "updatedBy" column = "updatedBy" type = "string" not-null="true" length="50"/>
       
       <property name = "statusType" column = "statusType" type = "string" not-null="true" length="20"/>
-      
-      <property name = "referenceID" column = "referenceID" type = "string" not-null="true" length="20"/>
       
       <property name = "updateTime" column = "updateTime" type = "timestamp" not-null="true"/>
    </class>

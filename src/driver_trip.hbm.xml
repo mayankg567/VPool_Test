@@ -4,10 +4,10 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
 
 <hibernate-mapping>
-   <class name = "com.vpool.model.DriverTripModel" table = "DriverTrip">
+   <class name = "com.vpool.model.DriverTripModel" table = "drivertrip">
       
       <meta attribute = "class-description">
-         This class contains the user details. 
+         This class contains the driver trip details. 
       </meta>
       
       <id name = "tripID" type = "integer" column="tripID">
@@ -26,14 +26,14 @@
       
       <property name = "endTime" column = "endTime" type = "timestamp" not-null="true" />
       
-      <property name = "createdOn" column = "createdOn" type = "date" not-null="true" />
+      <property name = "createdOn" column = "createdOn" type = "timestamp" not-null="true" />
       
       <property name = "status" column = "status" type = "string" not-null="true" length="9" />
       
-      <property name = "fareDriverTotal" column = "fareDriverTotal" type = "integer" not-null="true" length="4" />
+      <property name = "fareDriverTotal" column = "fareDriverTotal" type = "double" not-null="true"/>
       
-      <property name = "fareCash" column = "fareCash" type = "integer" not-null="true" length="4" />
+      <property name = "fareCash" column = "fareCash" type = "double" not-null="true"/>
       
-      <property name = "driverShare" column = "driverShare" type = "string" not-null="true" length="4" />
+      <property name = "driverShare" column = "driverShare" type = "double" not-null="true"/>
    </class>
 </hibernate-mapping>

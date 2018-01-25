@@ -1,9 +1,13 @@
 package com.vpool.model;
 
-public class FareChargeModel {
+import java.io.Serializable;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class FareChargeModel extends ActionSupport implements Serializable {
 
 	private String vehicleType;
-	private int baseFare, chargePerKM, chargePerMinute, driverSharePercent;
+	private double baseFare, chargePerKM, chargePerMinute, driverSharePercent;
 
 	public String getVehicleType() {
 		return vehicleType;
@@ -13,35 +17,35 @@ public class FareChargeModel {
 		this.vehicleType = vehicleType;
 	}
 
-	public int getBaseFare() {
+	public double getBaseFare() {
 		return baseFare;
 	}
 
-	public void setBaseFare(int baseFare) {
+	public void setBaseFare(double baseFare) {
 		this.baseFare = baseFare;
 	}
 
-	public int getChargePerKM() {
+	public double getChargePerKM() {
 		return chargePerKM;
 	}
 
-	public void setChargePerKM(int chargePerKM) {
+	public void setChargePerKM(double chargePerKM) {
 		this.chargePerKM = chargePerKM;
 	}
 
-	public int getChargePerMinute() {
+	public double getChargePerMinute() {
 		return chargePerMinute;
 	}
 
-	public void setChargePerMinute(int chargePerMinute) {
+	public void setChargePerMinute(double chargePerMinute) {
 		this.chargePerMinute = chargePerMinute;
 	}
 
-	public int getDriverSharePercent() {
+	public double getDriverSharePercent() {
 		return driverSharePercent;
 	}
 
-	public void setDriverSharePercent(int driverSharePercent) {
+	public void setDriverSharePercent(double driverSharePercent) {
 		this.driverSharePercent = driverSharePercent;
 	}
 

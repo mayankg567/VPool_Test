@@ -1,29 +1,16 @@
 package com.vpool.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import com.opensymphony.xwork2.ActionSupport;
 
 public class PassengerTripModel extends ActionSupport implements Serializable {
-	private int passengerTripID, tripID, passengerID, farePassTotal;
 
-	private String pickupPoint, dropPoint, expectedPickupTime, startTime, endTime, status, payStatus, payMode;
-
-	public String getPayStatus() {
-		return payStatus;
-	}
-
-	public void setPayStatus(String payStatus) {
-		this.payStatus = payStatus;
-	}
-
-	public String getPayMode() {
-		return payMode;
-	}
-
-	public void setPayMode(String payMode) {
-		this.payMode = payMode;
-	}
+	private int passengerTripID;
+	private double farePassTotal;
+	private String pickupPoint, dropPoint, status, payStatus, payMode;
+	private Date expectedPickupTime, startTime, endTime;
 
 	public int getPassengerTripID() {
 		return passengerTripID;
@@ -33,27 +20,11 @@ public class PassengerTripModel extends ActionSupport implements Serializable {
 		this.passengerTripID = passengerTripID;
 	}
 
-	public int getTripID() {
-		return tripID;
-	}
-
-	public void setTripID(int tripID) {
-		this.tripID = tripID;
-	}
-
-	public int getPassengerID() {
-		return passengerID;
-	}
-
-	public void setPassengerID(int passengerID) {
-		this.passengerID = passengerID;
-	}
-
-	public int getFarePassTotal() {
+	public double getFarePassTotal() {
 		return farePassTotal;
 	}
 
-	public void setFarePassTotal(int farePassTotal) {
+	public void setFarePassTotal(double farePassTotal) {
 		this.farePassTotal = farePassTotal;
 	}
 
@@ -73,36 +44,52 @@ public class PassengerTripModel extends ActionSupport implements Serializable {
 		this.dropPoint = dropPoint;
 	}
 
-	public String getExpectedPickupTime() {
-		return expectedPickupTime;
-	}
-
-	public void setExpectedPickupTime(String expectedPickupTime) {
-		this.expectedPickupTime = expectedPickupTime;
-	}
-
-	public String getStartTime() {
-		return startTime;
-	}
-
-	public void setStartTime(String startTime) {
-		this.startTime = startTime;
-	}
-
-	public String getEndTime() {
-		return endTime;
-	}
-
-	public void setEndTime(String endTime) {
-		this.endTime = endTime;
-	}
-
 	public String getStatus() {
 		return status;
 	}
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	public String getPayStatus() {
+		return payStatus;
+	}
+
+	public void setPayStatus(String payStatus) {
+		this.payStatus = payStatus;
+	}
+
+	public String getPayMode() {
+		return payMode;
+	}
+
+	public void setPayMode(String payMode) {
+		this.payMode = payMode;
+	}
+
+	public Date getExpectedPickupTime() {
+		return expectedPickupTime;
+	}
+
+	public void setExpectedPickupTime(Date expectedPickupTime) {
+		this.expectedPickupTime = expectedPickupTime;
+	}
+
+	public Date getStartTime() {
+		return startTime;
+	}
+
+	public void setStartTime(Date startTime) {
+		this.startTime = startTime;
+	}
+
+	public Date getEndTime() {
+		return endTime;
+	}
+
+	public void setEndTime(Date endTime) {
+		this.endTime = endTime;
 	}
 
 }

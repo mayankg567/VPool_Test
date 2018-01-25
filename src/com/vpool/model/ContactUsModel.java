@@ -1,12 +1,14 @@
 package com.vpool.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import com.opensymphony.xwork2.ActionSupport;
 
 public class ContactUsModel extends ActionSupport implements Serializable {
 	private int queryID;
-	private String emailID, queryMessage, submitTime, mob;
+	private String emailID, queryMessage, mobNo;
+	private Date submitTime;
 
 	public int getQueryID() {
 		return queryID;
@@ -32,20 +34,20 @@ public class ContactUsModel extends ActionSupport implements Serializable {
 		this.queryMessage = queryMessage;
 	}
 
-	public String getSubmitTime() {
+	public Date getSubmitTime() {
 		return submitTime;
 	}
 
-	public void setSubmitTime(String submitTime) {
+	public void setSubmitTime(Date submitTime) {
 		this.submitTime = submitTime;
 	}
 
 	public String getMob() {
-		return mob;
+		return mobNo;
 	}
 
-	public void setMob(String mob) {
-		this.mob = mob;
+	public void setMob(String mobNo) {
+		this.mobNo = mobNo;
 	}
 
 }

@@ -1,12 +1,14 @@
 package com.vpool.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import com.opensymphony.xwork2.ActionSupport;
 
 public class ComplaintModel extends ActionSupport implements Serializable {
-	private int complaintID, tripID;
-	private String registeredBy, registeredAgainst, complaintDescription, registeredOn, status;
+	private int complaintID;
+	private String complaintDescription, status;
+	private Date complaintTime;
 
 	public int getComplaintID() {
 		return complaintID;
@@ -14,30 +16,6 @@ public class ComplaintModel extends ActionSupport implements Serializable {
 
 	public void setComplaintID(int complaintID) {
 		this.complaintID = complaintID;
-	}
-
-	public int getTripID() {
-		return tripID;
-	}
-
-	public void setTripID(int tripID) {
-		this.tripID = tripID;
-	}
-
-	public String getRegisteredBy() {
-		return registeredBy;
-	}
-
-	public void setRegisteredBy(String registeredBy) {
-		this.registeredBy = registeredBy;
-	}
-
-	public String getRegisteredAgainst() {
-		return registeredAgainst;
-	}
-
-	public void setRegisteredAgainst(String registeredAgainst) {
-		this.registeredAgainst = registeredAgainst;
 	}
 
 	public String getComplaintDescription() {
@@ -48,20 +26,20 @@ public class ComplaintModel extends ActionSupport implements Serializable {
 		this.complaintDescription = complaintDescription;
 	}
 
-	public String getRegisteredOn() {
-		return registeredOn;
-	}
-
-	public void setRegisteredOn(String registeredOn) {
-		this.registeredOn = registeredOn;
-	}
-
 	public String getStatus() {
 		return status;
 	}
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	public Date getComplaintTime() {
+		return complaintTime;
+	}
+
+	public void setComplaintTime(Date complaintTime) {
+		this.complaintTime = complaintTime;
 	}
 
 }

@@ -4,10 +4,10 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
 
 <hibernate-mapping>
-   <class name = "com.vpool.model.VehicleDetailsModel" table = "VehicleDetails">
+   <class name = "com.vpool.model.VehicleDetailsModel" table = "vehicledetails">
       
       <meta attribute = "class-description">
-         This class contains the user details. 
+         This class contains the vehicle details. 
       </meta>
       
       <id name = "vehicleID" type = "integer" column="vehicleID">
@@ -22,9 +22,9 @@
       
       <property name = "modelName" column = "modelName" type = "string" not-null="true" length="50" />
       
-      <property name = "modelVer" column = "modelVer" type = "string" length="50" />
+      <property name = "modelVersion" column = "modelVersion" type = "string" length="50" />
       
-      <property name = "chesisNo" column = "chesisNo" type = "string" not-null="true" length="17" />
+      <property name = "chassisNo" column = "chassisNo" type = "string" not-null="true" length="17" />
       
       <property name = "insuranceNo" column = "insuranceNo" type = "string" not-null="true" length="50" />
       

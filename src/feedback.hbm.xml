@@ -4,10 +4,10 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
 
 <hibernate-mapping>
-   <class name = "com.vpool.model.FeedbackModel" table = "Feedback">
+   <class name = "com.vpool.model.FeedbackModel" table = "feedback">
       
       <meta attribute = "class-description">
-         This class contains the user details. 
+         This class contains the feedback details. 
       </meta>
       
       <id name = "fbID" type = "integer" column="fbID">

@@ -4,10 +4,10 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
 
 <hibernate-mapping>
-   <class name = "com.vpool.model.UserDocModel" table = "UserDoc">
+   <class name = "com.vpool.model.UserDocModel" table = "userdoc">
       
       <meta attribute = "class-description">
-         This class contains the user details. 
+         This class contains the user document details. 
       </meta>
       
       <id name = "udID" type = "integer" column="udID">

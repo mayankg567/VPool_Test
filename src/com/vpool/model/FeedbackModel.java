@@ -1,20 +1,14 @@
 package com.vpool.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import com.opensymphony.xwork2.ActionSupport;
 
 public class FeedbackModel extends ActionSupport implements Serializable {
-	private int fbID, userID;
-	private String message, submitTime;
-
-	public int getUserID() {
-		return userID;
-	}
-
-	public void setUserID(int userID) {
-		this.userID = userID;
-	}
+	private int fbID;
+	private String message;
+	private Date submitTime;
 
 	public int getFbID() {
 		return fbID;
@@ -32,11 +26,11 @@ public class FeedbackModel extends ActionSupport implements Serializable {
 		this.message = message;
 	}
 
-	public String getSubmitTime() {
+	public Date getSubmitTime() {
 		return submitTime;
 	}
 
-	public void setSubmitTime(String submitTime) {
+	public void setSubmitTime(Date submitTime) {
 		this.submitTime = submitTime;
 	}
 

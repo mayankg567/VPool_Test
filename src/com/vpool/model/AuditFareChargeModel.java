@@ -1,13 +1,16 @@
 package com.vpool.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import com.opensymphony.xwork2.ActionSupport;
 
 public class AuditFareChargeModel extends ActionSupport implements Serializable {
 
-	private int fcID, valueOld, valueNew;
-	private String fieldName, updateTime;
+	private int fcID;
+	private double valueOld, valueNew;
+	private String fieldName;
+	private Date updateTime;
 
 	public int getFcID() {
 		return fcID;
@@ -15,22 +18,6 @@ public class AuditFareChargeModel extends ActionSupport implements Serializable 
 
 	public void setFcID(int fcID) {
 		this.fcID = fcID;
-	}
-
-	public int getValueOld() {
-		return valueOld;
-	}
-
-	public void setValueOld(int valueOld) {
-		this.valueOld = valueOld;
-	}
-
-	public int getValueNew() {
-		return valueNew;
-	}
-
-	public void setValueNew(int valueNew) {
-		this.valueNew = valueNew;
 	}
 
 	public String getFieldName() {
@@ -41,11 +28,27 @@ public class AuditFareChargeModel extends ActionSupport implements Serializable 
 		this.fieldName = fieldName;
 	}
 
-	public String getUpdateTime() {
+	public double getValueOld() {
+		return valueOld;
+	}
+
+	public void setValueOld(double valueOld) {
+		this.valueOld = valueOld;
+	}
+
+	public double getValueNew() {
+		return valueNew;
+	}
+
+	public void setValueNew(double valueNew) {
+		this.valueNew = valueNew;
+	}
+
+	public Date getUpdateTime() {
 		return updateTime;
 	}
 
-	public void setUpdateTime(String updateTime) {
+	public void setUpdateTime(Date updateTime) {
 		this.updateTime = updateTime;
 	}
 

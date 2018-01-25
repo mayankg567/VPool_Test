@@ -4,24 +4,20 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
 
 <hibernate-mapping>
-   <class name = "com.vpool.model.ComplaintModel" table = "Complaint">
+   <class name = "com.vpool.model.ComplaintModel" table = "complaint">
       
       <meta attribute = "class-description">
-         This class contains the user details. 
+         This class contains the complaint details. 
       </meta>
       
       <id name = "complaintID" type = "integer" column="complaintID">
       	<generator class="increment"></generator>
       </id>
       
-      <property name = "registeredBy" column = "registeredBy" type = "string" not-null="true" length="50"/>
-      
-      <property name = "registeredAgainst" column = "registeredAgainst" type = "string" not-null="true" length="50"/>
-      
       <property name = "complaintDescription" column = "complaintDescription" type = "string" not-null="true" length="1000"/>
       
       <property name = "status" column = "status" type = "string" not-null="true" length="9"/>
       
-      <property name = "registeredOn" column = "registeredOn" type = "timestamp" not-null="true"/>
+      <property name = "complaintTime" column = "complaintTime" type = "timestamp" not-null="true"/>
    </class>
 </hibernate-mapping>
