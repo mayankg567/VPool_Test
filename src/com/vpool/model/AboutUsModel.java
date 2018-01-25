@@ -5,7 +5,7 @@ import java.io.Serializable;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class AboutUsModel extends ActionSupport implements Serializable {
-	String tagLine, description, mobNo, altMobNo, telephone, address, mission, vision;
+	private String tagLine, description, mobNo, altMobNo, telephone, address, mission, vision;
 
 	public String getTagLine() {
 		return tagLine;
@@ -70,5 +70,5 @@ public class AboutUsModel extends ActionSupport implements Serializable {
 	public void setVision(String vision) {
 		this.vision = vision;
 	}
-	
+
 }
