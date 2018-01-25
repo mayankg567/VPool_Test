@@ -7,7 +7,7 @@ import com.opensymphony.xwork2.ActionSupport;
 public class UserDocModel extends ActionSupport implements Serializable{
 	int udID, uID;
 	String aadharNo,panNo, dlNo, aadharLoc, panLoc, dlLoc;
-	String dlVerfStatus, panVerfStatus, aadharVerfStatus;
+	char dlVerfStatus, panVerfStatus, aadharVerfStatus;
 	public int getUdID() {
 		return udID;
 	}
@@ -56,22 +56,22 @@ public class UserDocModel extends ActionSupport implements Serializable{
 	public void setDlLoc(String dlLoc) {
 		this.dlLoc = dlLoc;
 	}
-	public String getDlVerfStatus() {
+	public char getDlVerfStatus() {
 		return dlVerfStatus;
 	}
-	public void setDlVerfStatus(String dlVerfStatus) {
+	public void setDlVerfStatus(char dlVerfStatus) {
 		this.dlVerfStatus = dlVerfStatus;
 	}
-	public String getPanVerfStatus() {
+	public char getPanVerfStatus() {
 		return panVerfStatus;
 	}
-	public void setPanVerfStatus(String panVerfStatus) {
+	public void setPanVerfStatus(char panVerfStatus) {
 		this.panVerfStatus = panVerfStatus;
 	}
-	public String getAadharVerfStatus() {
+	public char getAadharVerfStatus() {
 		return aadharVerfStatus;
 	}
-	public void setAadharVerfStatus(String aadharVerfStatus) {
+	public void setAadharVerfStatus(char aadharVerfStatus) {
 		this.aadharVerfStatus = aadharVerfStatus;
 	}
 	
