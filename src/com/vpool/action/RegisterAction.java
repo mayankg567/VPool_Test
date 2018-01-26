@@ -113,10 +113,10 @@ public class RegisterAction extends UserModel implements ServletRequestAware {
 			return "error";
 		}
 	}
-	
-	public String ajaxEOtpResend() throws Exception{
-		int eotp=Integer.parseInt(session.getAttribute("eotp").toString());
-		String email=session.getAttribute("emailID").toString();
+
+	public String ajaxEOtpResend() throws Exception {
+		int eotp = Integer.parseInt(session.getAttribute("eotp").toString());
+		String email = session.getAttribute("emailID").toString();
 		try {
 			SendEmailOTP.sendEmailOtp(email, eotp);
 			System.out.println("OTP resend successful on Email");
@@ -125,9 +125,9 @@ public class RegisterAction extends UserModel implements ServletRequestAware {
 			e.printStackTrace();
 			return "error";
 		}
-		
+
 	}
-	
+
 	@Override
 	public void setServletRequest(HttpServletRequest request) {
 		this.request = request;
