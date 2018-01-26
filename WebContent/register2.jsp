@@ -5,6 +5,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<script type="text/javascript" src="jquery-1.12.2.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	   $('#eotpresend').click(function(event) {
+	      console.log("Ajax eotp resend calling");
+	      $.getJSON('ajaxEOtpResend', {}, function(jsonResponse) {
+	        $('#eotpr').text("OTP resend successfully");
+	        
+	      							});
+	      								});
+							});
+</script>
 </head>
 <body>
 	<%-- <%
@@ -20,6 +32,8 @@
 			<tr>
 				<th>Enter OTP received on your Email &nbsp;<%=session.getAttribute("emailID").toString() %>:</th>
 				<td><input type="text" name="eotp" maxlength="6" required></td>
+				<td><button id="eotpresend">Resend OTP on your Email</button></td>
+				<td id="eotpr"></td>
 			</tr>
 			<tr>
 				<th>Enter OTP received on your Mobile &nbsp;<%=session.getAttribute("mobNo").toString() %>:</th>
