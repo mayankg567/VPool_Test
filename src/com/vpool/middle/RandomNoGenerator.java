@@ -1,4 +1,4 @@
-package com.vpool.action;
+package com.vpool.middle;
 
 public class RandomNoGenerator {
 	public static int generateNumber() {

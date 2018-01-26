@@ -5,15 +5,15 @@
 
 <struts>  
     <package name="default" extends="struts-default" namespace="/">  
-       <action name="register1" class="com.vpool.action.Register1Action">  
+       <action name="register1" class="com.vpool.action.RegisterAction">  
             <result name="success">/register2.jsp</result>  
             <result name="error">/register1.jsp</result>  
         </action>
-        <action name="register2" class="com.vpool.action.Register2Action">  
+        <action name="register2" class="com.vpool.action.RegisterAction" method="register2">  
             <result name="success">/register3.jsp</result>  
             <result name="error">/register2.jsp</result>  
         </action>
-        <action name="register3" class="com.vpool.action.Register3Action">  
+        <action name="register3" class="com.vpool.action.RegisterAction"  method="register3">  
             <result name="success">/success.jsp</result>  
             <result name="error">/register3.jsp</result>  
         </action>

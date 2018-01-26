@@ -7,15 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
+	<%-- <%
 		RequestDispatcher rd;
 		session = (HttpSession) session.getAttribute("sessionx");
 		if (session != null) {
 			rd = request.getRequestDispatcher(".jsp");
 			rd.forward(request, response);
 		}
-	%>
-	<form action="register3.do" method="post">
+	%> --%>
+	<form action="register3" method="post">
 		<table>
 			<tr>
 				<th>Enter Alternative Contact Number:</th>
@@ -33,7 +33,7 @@
 			</tr>
 			<tr>
 				<th>Enter Date of Birth:</th>
-				<td><input type="date" name="dob" required></td>
+				<td><input type="date" name="userdob" required></td>
 			</tr>
 			<tr>
 				<th>Enter Address:</th>
@@ -53,11 +53,11 @@
 			</tr>
 			<tr>
 				<th>Enter Password:</th>
-				<td><input type="text" name="pass" maxlength="14" placeholder="8 to 14 characters only" required></td>
+				<td><input type="password" name="pass" maxlength="14" placeholder="8 to 14 characters only" required></td>
 			</tr>
 			<tr>
 				<th>Retype Password:</th>
-				<td><input type="text" name="cpass" required></td>
+				<td><input type="password" name="cpass" required></td>
 			</tr>
 			<tr>
 				<td>

@@ -15,15 +15,15 @@
 			rd.forward(request, response);
 		}
 	%> --%>
-	<form action="register2.do" method="post">
+	<form action="register2" method="post">
 		<table>
 			<tr>
 				<th>Enter OTP received on your Email &nbsp;<%=session.getAttribute("emailID").toString() %>:</th>
-				<td><input type="number" name="eotp" maxlength="6" required></td>
+				<td><input type="text" name="eotp" maxlength="6" required></td>
 			</tr>
 			<tr>
 				<th>Enter OTP received on your Mobile &nbsp;<%=session.getAttribute("mobNo").toString() %>:</th>
-				<td><input type="number" name="motp" maxlength="6"></td>
+				<td><input type="text" name="motp" maxlength="6"></td>
 			</tr>
 			<tr>
 				<td>
