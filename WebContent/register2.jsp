@@ -12,7 +12,7 @@ $(document).ready(function() {
 	      console.log("Ajax eotp resend calling");
 	      $.getJSON('ajaxEOtpResend', {}, function(jsonResponse) {
 	        $('#eotpr').text("OTP resend successfully");
-	        
+	        console.log("Ajax eotp resend successful");
 	      							});
 	      								});
 							});
