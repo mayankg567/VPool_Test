@@ -32,7 +32,8 @@ $(document).ready(function() {
 			<tr>
 				<th>Enter OTP received on your Email &nbsp;<%=session.getAttribute("emailID").toString() %>:</th>
 				<td><input type="text" name="eotp" maxlength="6" required></td>
-				<td><button id="eotpresend">Resend OTP on your Email</button></td>
+				<!-- <td><button id="eotpresend">Resend OTP on your Email</button></td> -->
+				<td><a href="#" id="eotpresend">Resend OTP on Email ID</a> </td>
 				<td id="eotpr"></td>
 			</tr>
 			<tr>
@@ -49,6 +50,8 @@ $(document).ready(function() {
 			</tr>
 		</table>
 	</form>
+	<br><br>
+	<a href="register1.jsp">Made a mistake. Go back and change details.</a>
 	<br><br>
 	<a href="index.jsp">If Already a member. Click here to LOGIN</a>
 </body>
