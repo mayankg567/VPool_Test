@@ -7,7 +7,14 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class AuditDetailsUpdateModel extends ActionSupport implements Serializable {
 	private int updateID;
-	private String valueOld, valueNew, referredField, referFieldID;
+	private String valueOld, valueNew;
+	private String referredField; // TableName.ColumnName
+	private String referFieldID; // userID, vehicleID, emgID, tripID,
+									// passengerID,
+									// aboutus.mobNo, farecharge.vehicleType,
+									// udID
+	private String referFieldValue; // Stores PK values of referFieldID but not
+									// FK
 	private Date updateTime;
 
 	public int getUpdateID() {
@@ -56,6 +63,14 @@ public class AuditDetailsUpdateModel extends ActionSupport implements Serializab
 
 	public void setUpdateTime(Date updateTime) {
 		this.updateTime = updateTime;
+	}
+
+	public String getReferFieldValue() {
+		return referFieldValue;
+	}
+
+	public void setReferFieldValue(String referFieldValue) {
+		this.referFieldValue = referFieldValue;
 	}
 
 }

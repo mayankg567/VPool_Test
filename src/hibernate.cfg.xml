@@ -15,7 +15,9 @@
     	<property name="format_sql">true</property>
     	
     	<mapping resource="about_us.hbm.xml"></mapping>
-    	<mapping resource="audit_fare_charge.hbm.xml"></mapping>
+    	<mapping resource="audit_details_update.hbm.xml"></mapping>
+    	<mapping resource="audit_login.hbm.xml"></mapping>
+    	<!-- <mapping resource="audit_fare_charge.hbm.xml"></mapping> MODEL REMOVED -->
     	<mapping resource="contact_us.hbm.xml"></mapping>
     	<mapping resource="fare_charge.hbm.xml"></mapping>
     	<mapping resource="user.hbm.xml"></mapping>

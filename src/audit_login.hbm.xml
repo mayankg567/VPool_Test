@@ -14,6 +14,8 @@
       	<generator class="increment"></generator>
       </id>
       
+       <many-to-one name="userID_FK" column="userID_FK" class="com.vpool.model.UserModel"/>
+      
       <property name = "status" column = "status" type = "string" not-null="true" length="10"/>
       
       <property name = "loginTime" column = "loginTime" type = "timestamp" not-null="true"/>

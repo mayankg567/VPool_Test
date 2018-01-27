@@ -5,7 +5,7 @@ import java.util.Date;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-public class AuditFareChargeModel extends ActionSupport implements Serializable {
+public class AuditFareChargeModel_REMOVED extends ActionSupport implements Serializable {
 
 	private int fcID;
 	private double valueOld, valueNew;

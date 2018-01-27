@@ -7,15 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
+	<%-- <%
 		RequestDispatcher rd;
 		session = (HttpSession) session.getAttribute("sessionx");
 		if (session != null) {
 			rd = request.getRequestDispatcher(".jsp");
 			rd.forward(request, response);
 		}
-	%>
-	<form action="login.do" method="post">
+	%> --%>
+	<form action="login" method="post">
 		<table>
 			<tr>
 				<th>Enter EmailID:</th>

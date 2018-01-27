@@ -7,7 +7,10 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class AuditLoginModel extends ActionSupport implements Serializable {
 	private int logID;
-	private String status;
+
+	private UserModel userID_FK;
+
+	private String status; // FAILED, SUCCESSFUL
 	private Date loginTime;
 
 	public int getLogID() {
@@ -16,6 +19,14 @@ public class AuditLoginModel extends ActionSupport implements Serializable {
 
 	public void setLogID(int logID) {
 		this.logID = logID;
+	}
+
+	public UserModel getUserID_FK() {
+		return userID_FK;
+	}
+
+	public void setUserID_FK(UserModel userID_FK) {
+		this.userID_FK = userID_FK;
 	}
 
 	public String getStatus() {

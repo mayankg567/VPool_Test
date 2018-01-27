@@ -11,6 +11,10 @@
 		        <param name="noCache">true</param>
 		   </result>
    		</action>
+   		<action name="login" class="com.vpool.action.UserLoginAction">  
+            <result name="success">/success.jsp</result>  
+            <result name="error">/index.jsp</result>  
+        </action>
        <action name="register1" class="com.vpool.action.RegisterAction">  
             <result name="success">/register2.jsp</result>  
             <result name="error">/register1.jsp</result>  

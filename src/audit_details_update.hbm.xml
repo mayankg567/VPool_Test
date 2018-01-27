@@ -22,6 +22,8 @@
       
       <property name = "referFieldID" column = "referFieldID" type = "string" not-null="true" length="50" />
       
+      <property name = "referFieldValue" column = "referFieldValue" type = "string" not-null="true" length="50" />
+      
       <property name = "updateTime" column = "updateTime" type = "timestamp" not-null="true" />
    </class>
 </hibernate-mapping>

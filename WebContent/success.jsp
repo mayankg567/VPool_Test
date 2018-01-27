@@ -4,16 +4,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>SUCCESS</title>
 </head>
 <body>
-	<%
+	<%-- <%
 		RequestDispatcher rd;
 		session = (HttpSession) session.getAttribute("sessionx");
 		if (session == null) {
 			rd = request.getRequestDispatcher("index.jsp");
 			rd.forward(request, response);
 		}
-	%>
+	%> --%>
 </body>
 </html>
