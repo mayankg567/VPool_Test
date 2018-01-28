@@ -17,5 +17,7 @@
       <property name = "message" column = "message" type = "string" not-null="true" length="1000"/>
       
       <property name = "submitTime" column = "submitTime" type = "timestamp" not-null="true"/>
+      
+      <many-to-one name="userID_FK" column="userID_FK" class="com.vpool.model.UserModel" not-null="true"/>
    </class>
 </hibernate-mapping>

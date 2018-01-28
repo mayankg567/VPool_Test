@@ -7,7 +7,8 @@ import com.opensymphony.xwork2.ActionSupport;
 public class UserDocModel extends ActionSupport implements Serializable {
 	private int udID;
 	private String aadharNo, panNo, dlNo, aadharLoc, panLoc, dlLoc;
-	private String dlVerfStatus, panVerfStatus, aadharVerfStatus;
+	private String dlVerfStatus, panVerfStatus, aadharVerfStatus; // Y, N
+	private UserModel userID_FK;
 
 	public int getUdID() {
 		return udID;
@@ -87,6 +88,14 @@ public class UserDocModel extends ActionSupport implements Serializable {
 
 	public void setAadharVerfStatus(String aadharVerfStatus) {
 		this.aadharVerfStatus = aadharVerfStatus;
+	}
+
+	public UserModel getUserID_FK() {
+		return userID_FK;
+	}
+
+	public void setUserID_FK(UserModel userID_FK) {
+		this.userID_FK = userID_FK;
 	}
 
 }

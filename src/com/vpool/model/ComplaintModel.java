@@ -7,8 +7,10 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class ComplaintModel extends ActionSupport implements Serializable {
 	private int complaintID;
-	private String complaintDescription, status;
+	private String complaintDescription;
+	private String status; // STANDING, RESOLVED
 	private Date complaintTime;
+	private UserModel registeredBy_FK, registeredAgainst_FK;
 
 	public int getComplaintID() {
 		return complaintID;
@@ -40,6 +42,22 @@ public class ComplaintModel extends ActionSupport implements Serializable {
 
 	public void setComplaintTime(Date complaintTime) {
 		this.complaintTime = complaintTime;
+	}
+
+	public UserModel getRegisteredBy_FK() {
+		return registeredBy_FK;
+	}
+
+	public void setRegisteredBy_FK(UserModel registeredBy_FK) {
+		this.registeredBy_FK = registeredBy_FK;
+	}
+
+	public UserModel getRegisteredAgainst_FK() {
+		return registeredAgainst_FK;
+	}
+
+	public void setRegisteredAgainst_FK(UserModel registeredAgainst_FK) {
+		this.registeredAgainst_FK = registeredAgainst_FK;
 	}
 
 }

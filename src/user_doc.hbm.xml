@@ -31,5 +31,8 @@
       <property name = "panVerfStatus" column = "panVerfStatus" type = "string" not-null="true" length="1" />
       
       <property name = "aadharVerfStatus" column = "aadharVerfStatus" type = "string" not-null="true" length="1" />
+      
+      <many-to-one name="userID_FK" column="userID_FK" class="com.vpool.model.UserModel" not-null="true"/>
+      
    </class>
 </hibernate-mapping>

@@ -20,7 +20,7 @@
       
       <property name = "expectedTimeOfArrival" column = "expectedTimeOfArrival" type = "timestamp" not-null="true" />
       
-      <property name = "expectedTimeOfDestination" column = "expectedTimeOfDestination" type = "timestamp" not-null="true" />
+      <property name = "expectedTimeToDestination" column = "expectedTimeToDestination" type = "timestamp" not-null="true" />
       
       <property name = "startTime" column = "startTime" type = "timestamp" not-null="true" />
       
@@ -35,5 +35,9 @@
       <property name = "fareCash" column = "fareCash" type = "double" not-null="true"/>
       
       <property name = "driverShare" column = "driverShare" type = "double" not-null="true"/>
+      
+      <many-to-one name="driverID_FK" column="driverID_FK" class="com.vpool.model.UserModel" not-null="true"/>
+      
+      <many-to-one name="vehicleID_FK" column="vehicleID_FK" class="com.vpool.model.VehicleDetailsModel" not-null="true"/>
    </class>
 </hibernate-mapping>

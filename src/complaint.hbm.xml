@@ -19,5 +19,10 @@
       <property name = "status" column = "status" type = "string" not-null="true" length="9"/>
       
       <property name = "complaintTime" column = "complaintTime" type = "timestamp" not-null="true"/>
+      
+      <many-to-one name="registeredBy_FK" column="registeredBy_FK" class="com.vpool.model.UserModel" not-null="true"/>
+      
+      <many-to-one name="registeredAgainst_FK" column="registeredAgainst_FK" class="com.vpool.model.UserModel" not-null="true"/>
+      
    </class>
 </hibernate-mapping>

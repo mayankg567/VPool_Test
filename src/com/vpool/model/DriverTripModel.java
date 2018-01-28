@@ -8,8 +8,11 @@ import com.opensymphony.xwork2.ActionSupport;
 public class DriverTripModel extends ActionSupport implements Serializable {
 	private int tripID;
 	private double fareDriverTotal, fareCash, driverShare;
-	private String source, destination, status;
+	private String source, destination;
+	private String status; // DUE, ACTIVE, CANCELLED, COMPLETED
 	private Date createdOn, startTime, endTime, expectedTimeOfArrival, expectedTimeToDestination;
+	private UserModel driverID_FK;
+	private VehicleDetailsModel vehicleID_FK;
 
 	public int getTripID() {
 		return tripID;
@@ -105,6 +108,22 @@ public class DriverTripModel extends ActionSupport implements Serializable {
 
 	public void setExpectedTimeToDestination(Date expectedTimeToDestination) {
 		this.expectedTimeToDestination = expectedTimeToDestination;
+	}
+
+	public UserModel getDriverID_FK() {
+		return driverID_FK;
+	}
+
+	public void setDriverID_FK(UserModel driverID_FK) {
+		this.driverID_FK = driverID_FK;
+	}
+
+	public VehicleDetailsModel getVehicleID_FK() {
+		return vehicleID_FK;
+	}
+
+	public void setVehicleID_FK(VehicleDetailsModel vehicleID_FK) {
+		this.vehicleID_FK = vehicleID_FK;
 	}
 
 }

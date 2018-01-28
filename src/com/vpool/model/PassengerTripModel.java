@@ -9,8 +9,13 @@ public class PassengerTripModel extends ActionSupport implements Serializable {
 
 	private int passengerTripID;
 	private double farePassTotal;
-	private String pickupPoint, dropPoint, status, payStatus, payMode;
+	private String pickupPoint, dropPoint;
+	private String status; // DUE, ACTIVE, CANCELLED, COMPLETED
+	private String payStatus; // PENDING, COMPLETED, CANCELLED
+	private String payMode;
 	private Date expectedPickupTime, startTime, endTime;
+	private UserModel passengerID_FK;
+	private DriverTripModel tripID_FK;
 
 	public int getPassengerTripID() {
 		return passengerTripID;
@@ -90,6 +95,22 @@ public class PassengerTripModel extends ActionSupport implements Serializable {
 
 	public void setEndTime(Date endTime) {
 		this.endTime = endTime;
+	}
+
+	public UserModel getPassengerID_FK() {
+		return passengerID_FK;
+	}
+
+	public void setPassengerID_FK(UserModel passengerID_FK) {
+		this.passengerID_FK = passengerID_FK;
+	}
+
+	public DriverTripModel getTripID_FK() {
+		return tripID_FK;
+	}
+
+	public void setTripID_FK(DriverTripModel tripID_FK) {
+		this.tripID_FK = tripID_FK;
 	}
 
 }

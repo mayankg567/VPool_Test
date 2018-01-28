@@ -16,10 +16,18 @@
     	
     	<mapping resource="about_us.hbm.xml"></mapping>
     	<mapping resource="audit_details_update.hbm.xml"></mapping>
-    	<mapping resource="audit_login.hbm.xml"></mapping>
     	<!-- <mapping resource="audit_fare_charge.hbm.xml"></mapping> MODEL REMOVED -->
+    	<mapping resource="audit_login.hbm.xml"></mapping>
+    	<mapping resource="audit_status_change.hbm.xml"></mapping>
+    	<mapping resource="complaint.hbm.xml"></mapping>
     	<mapping resource="contact_us.hbm.xml"></mapping>
+    	<mapping resource="driver_trip.hbm.xml"></mapping>
+    	<mapping resource="emergency_connect.hbm.xml"></mapping>
     	<mapping resource="fare_charge.hbm.xml"></mapping>
+    	<mapping resource="feedback.hbm.xml"></mapping>
+    	<mapping resource="passenger_trip.hbm.xml"></mapping>
+    	<mapping resource="user_doc.hbm.xml"></mapping>
     	<mapping resource="user.hbm.xml"></mapping>
+    	<mapping resource="vehicle_details.hbm.xml"></mapping>
     </session-factory>
 </hibernate-configuration>

@@ -6,7 +6,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class FareChargeModel extends ActionSupport implements Serializable {
 
-	private String vehicleType;
+	private String vehicleType; // TWO, FOUR
 	private double baseFare, chargePerKM, chargePerMinute, driverSharePercent;
 
 	public String getVehicleType() {

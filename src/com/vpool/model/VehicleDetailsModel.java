@@ -6,8 +6,12 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class VehicleDetailsModel extends ActionSupport implements Serializable {
 	private int vehicleID, seatAvailable;
-	private String vehicleType, status, companyName, modelName, modelVersion, chassisNo, insuranceNo;
-	private String licensePlateNo, fuelType;
+	private String vehicleType; // TWO, FOUR
+	private String status; // ACTIVE, INACTIVE
+	private String companyName, modelName, modelVersion, chassisNo, insuranceNo;
+	private String licensePlateNo;
+	private String fuelType; // CNG, PETROL, DIESEL, ELECTRIC
+	private UserModel userID_FK;
 
 	public int getVehicleID() {
 		return vehicleID;
@@ -57,6 +61,22 @@ public class VehicleDetailsModel extends ActionSupport implements Serializable {
 		this.modelName = modelName;
 	}
 
+	public String getModelVersion() {
+		return modelVersion;
+	}
+
+	public void setModelVersion(String modelVersion) {
+		this.modelVersion = modelVersion;
+	}
+
+	public String getChassisNo() {
+		return chassisNo;
+	}
+
+	public void setChassisNo(String chassisNo) {
+		this.chassisNo = chassisNo;
+	}
+
 	public String getInsuranceNo() {
 		return insuranceNo;
 	}
@@ -81,20 +101,12 @@ public class VehicleDetailsModel extends ActionSupport implements Serializable {
 		this.fuelType = fuelType;
 	}
 
-	public String getModelVersion() {
-		return modelVersion;
+	public UserModel getUserID_FK() {
+		return userID_FK;
 	}
 
-	public void setModelVersion(String modelVersion) {
-		this.modelVersion = modelVersion;
-	}
-
-	public String getChasisNo() {
-		return chassisNo;
-	}
-
-	public void setChasisNo(String chassisNo) {
-		this.chassisNo = chassisNo;
+	public void setUserID_FK(UserModel userID_FK) {
+		this.userID_FK = userID_FK;
 	}
 
 }

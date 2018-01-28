@@ -17,5 +17,7 @@
       <property name = "emgName" column = "emgName" type = "string" not-null="true" length="50"/>
       
       <property name = "emgContact" column = "emgContact" type = "string" not-null="true" length="50"/>
+      
+      <many-to-one name="userID_FK" column="userID_FK" class="com.vpool.model.UserModel" not-null="true"/>
    </class>
 </hibernate-mapping>

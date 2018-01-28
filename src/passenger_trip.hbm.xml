@@ -31,5 +31,10 @@
       <property name = "payStatus" column = "payStatus" type = "string" not-null="true" length="15" />
       
       <property name = "payMode" column = "payMode" type = "string" not-null="true" length="20" />
+      
+      <many-to-one name="passengerID_FK" column="passengerID_FK" class="com.vpool.model.UserModel" not-null="true"/>
+      
+      <many-to-one name="tripID_FK" column="tripID_FK" class="com.vpool.model.DriverTripModel" not-null="true"/>
+      
    </class>
 </hibernate-mapping>

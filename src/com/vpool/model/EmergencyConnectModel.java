@@ -7,6 +7,7 @@ import com.opensymphony.xwork2.ActionSupport;
 public class EmergencyConnectModel extends ActionSupport implements Serializable {
 	private int emgID;
 	private String emgName, emgContact;
+	private UserModel userID_FK;
 
 	public int getEmgID() {
 		return emgID;
@@ -30,6 +31,14 @@ public class EmergencyConnectModel extends ActionSupport implements Serializable
 
 	public void setEmgContact(String emgContact) {
 		this.emgContact = emgContact;
+	}
+
+	public UserModel getUserID_FK() {
+		return userID_FK;
+	}
+
+	public void setUserID_FK(UserModel userID_FK) {
+		this.userID_FK = userID_FK;
 	}
 
 }

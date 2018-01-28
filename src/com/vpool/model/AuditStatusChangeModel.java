@@ -7,8 +7,13 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class AuditStatusChangeModel extends ActionSupport implements Serializable {
 	private int statusID;
-	private String oldStatus, newStatus, updatedBy, statusType;
+	private String oldStatus, newStatus;
+	private String updatedBy; // ADMIN, SYSTEM
+	private String statusType; // user, vehicle, complaint, dtrip, ptrip,
+								// userdoc
 	private Date updateTime;
+	private int referenceID; // contains PK values of userID, vehicleID, udID,
+								// complainID, tripID, passengerTripID
 
 	public int getStatusID() {
 		return statusID;
@@ -56,6 +61,14 @@ public class AuditStatusChangeModel extends ActionSupport implements Serializabl
 
 	public void setStatusType(String statusType) {
 		this.statusType = statusType;
+	}
+
+	public int getReferenceID() {
+		return referenceID;
+	}
+
+	public void setReferenceID(int referenceID) {
+		this.referenceID = referenceID;
 	}
 
 }
