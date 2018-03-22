@@ -10,9 +10,9 @@ public class AuditDetailsUpdateModel extends ActionSupport implements Serializab
 	private String valueOld, valueNew;
 	private String referredField; // TableName.ColumnName
 	private String referFieldID; // userID, vehicleID, emgID, tripID,
-									// passengerID,
-									// aboutus.mobNo, farecharge.vehicleType,
-									// udID
+									// ptID, fcID, ubID
+									// aboutus.mobNo,
+									// udID, ucID, offerID, txID
 	private String referFieldValue; // Stores PK values of referFieldID but not
 									// FK
 	private Date updateTime;

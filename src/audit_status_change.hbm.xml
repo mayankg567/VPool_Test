@@ -14,11 +14,11 @@
       	<generator class="increment"></generator>
       </id>
       
-      <property name = "oldStatus" column = "oldStatus" type = "string" not-null="true" length="10"/>
+      <property name = "oldStatus" column = "oldStatus" type = "string" not-null="true" length="20"/>
       
-      <property name = "newStatus" column = "newStatus" type = "string" not-null="true" length="10"/>
+      <property name = "newStatus" column = "newStatus" type = "string" not-null="true" length="20"/>
       
-      <property name = "updatedBy" column = "updatedBy" type = "string" not-null="true" length="50"/>
+      <property name = "updatedBy" column = "updatedBy" type = "string" not-null="true" length="10"/>
       
       <property name = "statusType" column = "statusType" type = "string" not-null="true" length="20"/>
       

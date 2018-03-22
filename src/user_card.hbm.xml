@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.vpool.model.UserCardDetailsModel" table = "usercards">
+      
+      <meta attribute = "class-description">
+         This class contains the user card details. 
+      </meta>
+           
+      <id name = "ucID" type = "integer" column="ucID">
+      	<generator class="increment"></generator>
+      </id>
+      
+      <property name = "cardNo" column = "cardNo" type = "string" not-null="true" unique="true" length="20"/>
+      
+      <property name = "merchant" column = "merchant" type = "string" not-null="true" length="30"/>
+      
+      <property name = "expMonth" column = "expMonth" type = "string" not-null="true" length="2"/>
+      
+      <property name = "expYear" column = "expYear" type = "string" length="2" />
+      
+      <many-to-one name="userID_FK" column="userID_FK" class="com.vpool.model.UserModel" not-null="true"/>
+         </class>
+</hibernate-mapping>

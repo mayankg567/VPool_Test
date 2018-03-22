@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.vpool.model.UserBankDetailsModel" table = "userbank">
+      
+      <meta attribute = "class-description">
+         This class contains the user bank details. 
+      </meta>
+      
+      <id name = "ubID" type = "integer" column="ubID">
+      	<generator class="increment"></generator>
+      </id>
+      
+      <property name = "bankName" column = "bankName" type = "string" not-null="true" length="75"/>
+      
+      <property name = "branchAddress" column = "branchAddress" type = "string" not-null="true" length="255"/>
+      
+      <property name = "IFSC" column = "IFSC" type = "string" not-null="true" length="11"/>
+      
+      <property name = "accountNo" column = "accountNo" type = "string" not-null="true" length="20" />
+      
+      <many-to-one name="userID_FK" column="userID_FK" class="com.vpool.model.UserModel" not-null="true"/>
+      
+   </class>
+</hibernate-mapping>

@@ -14,9 +14,13 @@
       	<generator class="increment"></generator>
       </id>
       
-      <property name = "emgName" column = "emgName" type = "string" not-null="true" length="50"/>
+      <property name = "emgName1" column = "emgName1" type = "string" not-null="true" length="50"/>
       
-      <property name = "emgContact" column = "emgContact" type = "string" not-null="true" length="50"/>
+      <property name = "emgContact1" column = "emgContact1" type = "string" not-null="true" length="50"/>
+      
+      <property name = "emgName2" column = "emgName2" type = "string" not-null="true" length="50"/>
+      
+      <property name = "emgContact2" column = "emgContact2" type = "string" not-null="true" length="50"/>
       
       <many-to-one name="userID_FK" column="userID_FK" class="com.vpool.model.UserModel" not-null="true"/>
    </class>

@@ -9,7 +9,17 @@ public class UserModel extends ActionSupport implements Serializable {
 	private int userID, pincode;
 	private String emailID, pass, firstName, middleName, lastName, mobNo, altMobNo, gender, address;
 	private Date dob, registeredOn;
-	private String city, state, status, photoLoc;
+	private String city, state, photoLoc;
+	private String status; // ACTIVE, BLOCKED, DELETED, INACTIVE, UNVERIFIED
+	private double walletAmt;
+
+	public double getWalletAmt() {
+		return walletAmt;
+	}
+
+	public void setWalletAmt(double walletAmt) {
+		this.walletAmt = walletAmt;
+	}
 
 	public int getUserID() {
 		return userID;

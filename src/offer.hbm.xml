@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.vpool.model.OfferModel" table = "offer">
+      
+      <meta attribute = "class-description">
+         This class contains the offer details. 
+      </meta>
+      
+      <id name = "offerID" type = "integer" column="offerID">
+      	<generator class="increment"></generator>
+      </id>
+      
+      <property name = "promoCode" column = "promoCode" type = "string" not-null="true" length="20"/>
+      
+      <property name = "description" column = "description" type = "string" not-null="true" length="150"/>
+      
+      <property name = "status" column = "status" type = "string" not-null="true" length="10"/>
+          
+      <property name = "activationDate" column = "activationDate" type = "timestamp" not-null="true"/>
+      
+      <property name = "expiryDate" column = "expiryDate" type = "timestamp" not-null="true"/>
+      
+      <property name = "city" column = "city" type = "string" not-null="true" length="50"/>
+      
+      <property name = "state" column = "state" type = "string" not-null="true" length="50" />
+      
+      <property name = "maxDiscountAmt" column = "maxDiscountAmt" type = "double" not-null="true"/>
+      
+      <property name = "discountValue" column = "discountValue" type = "double" not-null="true"/>
+      
+      <property name = "currentUserCount" column = "currentUserCount" type = "integer" not-null="true"/>
+      
+      <property name = "maxUserCount" column = "maxUserCount" type = "integer" not-null="true"/>
+      
+      <property name = "maxAvailCount" type = "integer" not-null="true">
+      	<column name="maxAvailCount" default="1"></column>
+      </property>
+      
+      <property name = "discountType" column = "discountType" type = "string" not-null="true" length="10"/>
+      
+   </class>
+</hibernate-mapping>

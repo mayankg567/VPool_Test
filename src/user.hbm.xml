@@ -36,7 +36,7 @@
       
       <property name = "pincode" column = "pincode" type = "integer" not-null="true" length="6" />
       
-      <property name = "state" column = "state" type = "string" not-null="true" length="60" />
+      <property name = "state" column = "state" type = "string" not-null="true" length="50" />
       
       <property name = "dob" column = "dob" type = "date" not-null="true"/>
       
@@ -45,5 +45,9 @@
       <property name = "status" column = "status" type = "string" not-null="true" length="7" />
       
       <property name = "photoLoc" column = "photoLoc" type = "string" length="256" />
+      
+      <property name = "walletAmt" type = "double">
+      	<column name="walletAmt" default="0.0"></column>
+      </property>
    </class>
 </hibernate-mapping>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.vpool.model.PassbookModel" table = "passbook">
+      
+      <meta attribute = "class-description">
+         This class contains the user passbook detailss. 
+      </meta>
+      
+      <id name = "txID" type = "integer" column="txID">
+      	<generator class="increment"></generator>
+      </id>
+      
+      <property name = "credit" column = "credit" type = "double" not-null="true"/>
+      
+      <property name = "debit" column = "debit" type = "double" not-null="true"/>
+      
+      <property name = "prevBal" column = "prevBal" type = "double" not-null="true"/>
+      
+      <property name = "currrentBal" column = "currrentBal" type = "double" not-null="true"/>
+      
+      <property name = "description" column = "description" type = "string" not-null="true" length = "30"/>
+      
+      <property name = "txTime" column = "txTime" type = "timestamp" not-null="true"/>
+      
+      <many-to-one name="userID_FK" column="userID_FK" class="com.vpool.model.UserModel" not-null="true"/>
+      
+   </class>
+</hibernate-mapping>

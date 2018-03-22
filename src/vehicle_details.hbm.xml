@@ -32,7 +32,9 @@
       
       <property name = "fuelType" column = "fuelType" type = "string" not-null="true" length="20" />
       
-      <property name = "seatAvailable" column = "seatAvailable" type = "integer" not-null="true" length="2" />
+      <property name = "seatAvailable" type = "integer" not-null="true" length="2">
+      	<column name="seatAvailable" default="1"></column>
+      </property>
       
       <many-to-one name="userID_FK" column="userID_FK" class="com.vpool.model.UserModel" not-null="true"/>
       

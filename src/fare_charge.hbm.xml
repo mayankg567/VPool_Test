@@ -10,8 +10,10 @@
          This class contains the fare charge details. 
       </meta>
       
-      <id name = "vehicleType" type = "string" column="vehicleType">
+      <id name = "fcID" type = "integer" column="fcID">
       </id>
+      
+      <property name = "vehicleType" column = "vehicleType" type = "string" not-null="true"/>
       
       <property name = "baseFare" column = "baseFare" type = "double" not-null="true"/>
       
@@ -20,5 +22,12 @@
       <property name = "chargePerMinute" column = "chargePerMinute" type = "double" not-null="true"/>
       
       <property name = "driverSharePercent" column = "driverSharePercent" type = "double" not-null="true"/>
+      
+      <property name = "city" column = "city" type = "string" not-null="true" length="50"/>
+      
+       <property name = "state" column = "state" type = "string" not-null="true" length = "50"/>
+      
+      
+      
    </class>
 </hibernate-mapping>

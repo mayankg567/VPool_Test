@@ -7,22 +7,38 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class PassengerTripModel extends ActionSupport implements Serializable {
 
-	private int passengerTripID;
+	private int ptID;
 	private double farePassTotal;
 	private String pickupPoint, dropPoint;
 	private String status; // DUE, ACTIVE, CANCELLED, COMPLETED
-	private String payStatus; // PENDING, COMPLETED, CANCELLED
-	private String payMode;
 	private Date expectedPickupTime, startTime, endTime;
+	private double discountAmount;
 	private UserModel passengerID_FK;
 	private DriverTripModel tripID_FK;
+	private OfferModel offerID_FK;
 
-	public int getPassengerTripID() {
-		return passengerTripID;
+	public int getPtID() {
+		return ptID;
 	}
 
-	public void setPassengerTripID(int passengerTripID) {
-		this.passengerTripID = passengerTripID;
+	public double getDiscountAmount() {
+		return discountAmount;
+	}
+
+	public void setDiscountAmount(double discountAmount) {
+		this.discountAmount = discountAmount;
+	}
+
+	public OfferModel getOfferID_FK() {
+		return offerID_FK;
+	}
+
+	public void setOfferID_FK(OfferModel offerID_FK) {
+		this.offerID_FK = offerID_FK;
+	}
+
+	public void setPtID(int ptID) {
+		this.ptID = ptID;
 	}
 
 	public double getFarePassTotal() {
@@ -55,22 +71,6 @@ public class PassengerTripModel extends ActionSupport implements Serializable {
 
 	public void setStatus(String status) {
 		this.status = status;
-	}
-
-	public String getPayStatus() {
-		return payStatus;
-	}
-
-	public void setPayStatus(String payStatus) {
-		this.payStatus = payStatus;
-	}
-
-	public String getPayMode() {
-		return payMode;
-	}
-
-	public void setPayMode(String payMode) {
-		this.payMode = payMode;
 	}
 
 	public Date getExpectedPickupTime() {

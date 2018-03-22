@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.vpool.model.TripPaymentModel" table = "trippayment">
+      
+      <meta attribute = "class-description">
+         This class contains the payment details of passenger trip. 
+      </meta>
+      
+      <id name = "payID" type = "integer" column="payID">
+      	<generator class="increment"></generator>
+      </id>
+      
+      <property name = "payMode" column = "payMode" type = "string" not-null="true" length="12"/>
+      
+      <property name = "payAmount" column = "payAmount" type = "double" not-null="true"/>
+      
+      <property name = "payWallet" column = "payWallet" type = "double" not-null="true"/>
+      
+      <property name = "payStatus" column = "payStatus" type = "string" not-null="true" length="10" />
+      
+      <many-to-one name="ptID_FK" column="ptID_FK" class="com.vpool.model.PassengerTripModel" not-null="true"/>
+      
+   </class>
+</hibernate-mapping>

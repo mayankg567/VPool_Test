@@ -8,6 +8,32 @@ public class FareChargeModel extends ActionSupport implements Serializable {
 
 	private String vehicleType; // TWO, FOUR
 	private double baseFare, chargePerKM, chargePerMinute, driverSharePercent;
+	private int fcID;
+	private String city, state;
+
+	public int getFcID() {
+		return fcID;
+	}
+
+	public void setFcID(int fcID) {
+		this.fcID = fcID;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
 
 	public String getVehicleType() {
 		return vehicleType;
